@@ -2,10 +2,10 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'DM Sans';
 }
 
 .header {
-
     display: flex;
     width: 90%;
     height: 10vh;
@@ -14,7 +14,8 @@
 }
 
 a:hover {
-    background-color: red;
+    background-color:  #6666ff;
+    color: black;
 }
 
 .logo-container,.nav-links,.cart {
@@ -70,15 +71,57 @@ justify-content: flex-end;
 .intro-text p {
     margin: 5px;
     font-size: 25px;
-    color: #6666ff;
+    background: linear-gradient(to right, #777777, #6666ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .cover {
     flex: 1;
 }
 .cover img {
-    height: 50vh;
+    height: 65vh;
+    filter: drop-shadow(0px 15px 3px black);
 }
 
-.cta {
+.cta-add {
     margin: 50px 0 0 0;
+    border: solid 2px #6666ff;
+    width: 150px;
+    height: 50px;
+    color: #777777;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.cta-add:hover {
+    background-color:  #6666ff;
+    color: black;
+}
+
+.big-circle {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+    opacity: 0.5;
+    height: 85%;
+}
+
+.mid-circle {
+    position: absolute;
+    top: 35%;
+    right: 35%;
+    z-index: -1;
+    height: 60%;
+    opacity: 0.3;
+
+}
+
+
+.small-circle {
+    position: absolute;
+    top: 50%;
+    right: 60%;
+    z-index: -1;
+    height: 50%;
 }
