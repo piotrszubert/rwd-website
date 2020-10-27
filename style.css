@@ -64,6 +64,7 @@ justify-content: flex-end;
     font-size: 50px;
     font-weight: 500;
     background: linear-gradient(to right, #777777, #6666ff);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -72,14 +73,15 @@ justify-content: flex-end;
     margin: 5px;
     font-size: 25px;
     background: linear-gradient(to right, #777777, #6666ff);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.cover {
-    flex: 1;
+.slideshow-container {
+    display: flex;
 }
-.cover img {
-    height: 65vh;
+.slideshow-container img {
+    height: 50vh;
     filter: drop-shadow(0px 15px 3px black);
 }
 
@@ -125,3 +127,67 @@ justify-content: flex-end;
     z-index: -1;
     height: 50%;
 }
+
+.prev, .next{
+  position: absolute;
+  padding: 10px;
+  width: auto;
+  top: 80%;
+  margin-top: -15px;
+  font-size: 20px;
+  cursor: pointer;
+  user-select: none;
+  border: solid 2px #6666ff;
+}
+
+.prev:hover {
+    background-color: #6666ff;
+}
+ .next:hover {
+    background-color: #6666ff;
+}
+
+.next {
+    right: 5%;
+}
+
+@media screen and (max-width: 1024px){
+    .presentation {
+        flex-direction: column;
+    }
+    .introduction {
+        text-align: center;
+    }
+    .intro-text h1{
+        font-size: 30px;
+    }
+    .intro-text p {
+        font-size: 18px;
+    }
+    .cta-add {
+        margin-top: 50px;
+    }
+    .slideshow-container img {
+        height: 30vh;
+        filter: drop-shadow(0px 15px 3px black);
+    }
+    .nav-links {
+        font-size: 14px;
+    }
+    .prev {
+        width: auto;
+        bottom: 12%;
+        left: 1%;
+        border: none;
+        background-color: transparent;
+      
+    }
+    .next{
+        width: auto;
+        bottom: 12%;
+        right: 1%;
+        border: none;
+        background-color: transparent;
+    }
+}
+

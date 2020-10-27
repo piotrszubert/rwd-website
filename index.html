@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Corp </title>
@@ -24,10 +25,10 @@
             <a class="nav-link" href="index.html"> Home </a>
 
 
-            <a class="nav-link" href="about.html"> About </a>
+            <a class="nav-link" href="#"> About </a>
 
 
-            <a class="nav-link" href="contact.html"> Contact </a>
+            <a class="nav-link" href="#"> Contact </a>
         </nav>
 
         <div class="cart">
@@ -52,8 +53,23 @@
                     <button class="cta-add"> add to cart </button>
                 </div>
             </div>
-            <div class="cover">
-                <img src="./img/laptop-rog.png" alt="mate" />
+
+
+            <div class="slideshow-container">
+
+                <img class="product" src="./img/laptop-rog.png" alt="rog" />
+                <img class="product" src="./img/laptop-rog-2.png" alt="rog2" />
+                <img class="product" src="./img/laptop-rog-3.png" alt="rog3" />
+
+                <script>
+                    let myShow = w3.slideshow(".product", 0); 
+                </script>
+
+       
+                <button class="prev" onclick="myShow.previous()"> &#10094 </button>
+                <button class="next" onclick="myShow.next()"> &#10095 </button>
+         
+
             </div>
         </section>
 
@@ -62,10 +78,11 @@
         <img class="big-circle" src="./img/big-eclipse.svg" alt="bigEclipse" />
         <img class="mid-circle" src="./img/mid-eclipse.svg" alt="midEclipse" />
         <img class="small-circle" src="./img/small-eclipse.svg" alt="smallEclipse" />
+
     </main>
 
 
-    <script src="script.js"></script>
+
 </body>
 
 </html>
